@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Region: "us-east-2"
+Region: "us-west-2"
 Resources:
   EC2Instance:
     Type: "AWS::EC2::Instance"
