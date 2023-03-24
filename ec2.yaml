@@ -1,9 +1,4 @@
 ---
-Parameters:
-  MyIAMUser:
-    Type: String
-    Default: rony.tran@hcl.com
-    Description: The name of the IAM user
 Resources:
   EC2Instance:
     Type: AWS::EC2::Instance
@@ -11,28 +6,5 @@ Resources:
       ImageId: ami-02f3f602d23f1659d
       InstanceType: t2.micro
       KeyName: rony-jenkins
-      IamInstanceProfile: MyIAMInstanceProfile
-  MyIAMInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Roles:
-        - MyIAMRole
-  MyIAMRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: ec2.amazonaws.com
-            Action: sts:AssumeRole
-      Policies:
-        - PolicyName: MyEC2Policy
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Effect: Allow
-                Action: s3:GetObject
-                Resource: "*"
-      Path: /
+      IamInstanceProfile: IAMUSER
+
