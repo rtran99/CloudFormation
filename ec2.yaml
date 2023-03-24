@@ -6,5 +6,4 @@ Resources:
       ImageId: ami-02f3f602d23f1659d
       InstanceType: t2.micro
       KeyName: rony-jenkins
-      IamInstanceProfile:
-        Arn: arn:aws:iam::aws:policy/AdministratorAccess
+      IamInstanceProfile: arn:aws:iam::aws:policy/AdministratorAccess
