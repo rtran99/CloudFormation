@@ -1,5 +1,4 @@
-AWSTemplateFormatVersion: "2010-09-09"
-Region: "us-west-2"
+AWSTemplateFormatVersion: "2010-09-09"https://github.com/rtran99/CloudFormation
 Resources:
   EC2Instance:
     Type: "AWS::EC2::Instance"
